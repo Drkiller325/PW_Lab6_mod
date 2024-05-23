@@ -1,38 +1,102 @@
-.App {
+/* App.css */
+
+/* Light Theme */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
   color: white;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-button {
+  background: #0056b3;
+  border: none;
+  cursor: pointer;
+}
+
+.like-button.liked {
+  color: #28a745;
+}
+
+/* Dark Theme */
+[data-theme="dark"] body {
+  background-color: #2c2727;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .container {
+  background: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] input[type="text"] {
+  background: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+[data-theme="dark"] button {
+  background: #007bff;
+}
+
+[data-theme="dark"] button:hover {
+  background: #0056b3;
+}
+
+[data-theme="dark"] li {
+  background: #333;
+  border: 1px solid #555;
+}
+
+[data-theme="dark"] .like-button.liked {
+  color: #28a745;
 }
